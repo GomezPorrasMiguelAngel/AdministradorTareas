@@ -72,12 +72,36 @@ public class TareaDbHelper extends SQLiteOpenHelper {
                         null);
     }
 
+    public Cursor getAllLawyersidunidad() {
+        return getReadableDatabase()
+                .query(
+                        TareaContract.TareaEntry.TABLE_NAME,
+                        null,
+                        null,
+                        null,
+                        TareaContract.TareaEntry.IDUNIDAD,
+                        null,
+                        TareaContract.TareaEntry.IDUNIDAD);
+    }
+
     public Cursor getLawyerById(String tareaId) {
         Cursor c = getReadableDatabase().query(
                 TareaContract.TareaEntry.TABLE_NAME,
                 null,
                 TareaContract.TareaEntry.ID + " LIKE ?",
                 new String[]{tareaId},
+                null,
+                null,
+                null);
+        return c;
+    }
+
+    public Cursor getLawyerByIdMateria(String materiaId) {
+        Cursor c = getReadableDatabase().query(
+                TareaContract.TareaEntry.TABLE_NAME,
+                null,
+                TareaContract.TareaEntry.IDMATERIA + " LIKE ?",
+                new String[]{materiaId},
                 null,
                 null,
                 null);

@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class MateriaFragment extends Fragment {
     private FloatingActionButton mAddButton;
 
 
+
     public MateriaFragment() {
         // Required empty public constructor
     }
@@ -47,6 +49,7 @@ public class MateriaFragment extends Fragment {
         mMateriaList = (ListView) root.findViewById(R.id.materia_list);
         mMateriaAdapter = new MateriaCursorAdapter(getActivity(), null);
         mAddButton = (FloatingActionButton) getActivity().findViewById(R.id.fab);
+
 
         // Setup
         mMateriaList.setAdapter(mMateriaAdapter);
@@ -109,6 +112,8 @@ public class MateriaFragment extends Fragment {
         Intent intent = new Intent(getActivity(), AddEditMateriaActivity.class);
         startActivityForResult(intent, AddEditMateriaActivity.REQUEST_ADD_MATERIA);
     }
+
+
 
     private void showDetailScreen(String lawyerId) {
         Intent intent = new Intent(getActivity(), MateriaDetailActivity.class);

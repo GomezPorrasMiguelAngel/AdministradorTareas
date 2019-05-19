@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Materias</string>
+    <string name="app_name">MikOs App</string>
     <string name="action_settings">Configuracion</string>
 
     <!-- TODO: Remove or change this placeholder text -->
@@ -9,7 +9,7 @@
         "Esto es una prueba"
     </string>
     <string name="action_edit">Editar</string>
-    <string name="title_activity_add_edit">Añadir/Editar Materia</string>
+    <string name="title_activity_add_edit">Añadir/Editar </string>
     <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="field_error">Ingresa un valor</string>
     <string name="action_delete">Eliminar</string>

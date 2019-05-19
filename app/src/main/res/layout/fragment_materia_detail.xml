@@ -1,16 +1,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginLeft="72dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
     android:layout_marginRight="@dimen/activity_horizontal_margin"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="8dp"
         android:text="ID"
         android:textColor="?colorPrimary" />
 
@@ -18,14 +19,16 @@
         android:id="@+id/tv_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:text="0" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="8dp"
         android:text="Nombre"
         android:textColor="?colorPrimary" />
 
@@ -33,14 +36,16 @@
         android:id="@+id/tv_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:text="Servicio Social" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="8dp"
         android:text="Profesor"
         android:textColor="?colorPrimary" />
 
@@ -48,7 +53,16 @@
         android:id="@+id/tv_profesor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:text="@string/large_text" />
+
+    <Button
+        android:id="@+id/btn_vertareas"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/colorPrimary"
+        android:text="Ver Tareas" />
 
 </LinearLayout>

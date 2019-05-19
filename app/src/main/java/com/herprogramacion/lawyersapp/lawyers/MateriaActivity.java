@@ -23,7 +23,7 @@ public class MateriaActivity extends AppCompatActivity {
     private PendingIntent alarmIntent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        crearAlarma();
+        //crearAlarma();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_materia);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -40,7 +40,7 @@ public class MateriaActivity extends AppCompatActivity {
                     .commit();
         }
     }
-    protected void crearAlarma() {
+    /*protected void crearAlarma() {
         //ALARMA
         //alarmMgr = (AlarmManager)Context.getSystemService(Context.ALARM_SERVICE);
         alarmMgr=(AlarmManager) getBaseContext().getSystemService(Context.ALARM_SERVICE) ;
@@ -59,5 +59,5 @@ public class MateriaActivity extends AppCompatActivity {
                 1000 * 60 * 20, alarmIntent);
         //FIN ALARMA
 
-    }
+    }*/
 }

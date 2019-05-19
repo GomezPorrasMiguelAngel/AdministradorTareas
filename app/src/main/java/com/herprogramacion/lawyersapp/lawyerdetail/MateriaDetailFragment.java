@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +24,7 @@ import com.herprogramacion.lawyersapp.data.Materia;
 import com.herprogramacion.lawyersapp.data.MateriaDbHelper;
 import com.herprogramacion.lawyersapp.lawyers.MateriaActivity;
 import com.herprogramacion.lawyersapp.lawyers.MateriaFragment;
+import com.herprogramacion.lawyersapp.lawyers.TareaActivity;
 
 public class MateriaDetailFragment extends Fragment {
     private static final String ARG_MATERIA_ID = "materiaId";
@@ -34,6 +36,8 @@ public class MateriaDetailFragment extends Fragment {
     private TextView mId;
     private TextView mNombre;
     private TextView mProfesor;
+    private Button btnvertareas;
+
 
     private MateriaDbHelper mMateriaDbHelper;
 
@@ -53,7 +57,6 @@ public class MateriaDetailFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         if (getArguments() != null) {
             mMateriaId = getArguments().getString(ARG_MATERIA_ID);
         }
@@ -70,9 +73,14 @@ public class MateriaDetailFragment extends Fragment {
         mId = (TextView) root.findViewById(R.id.tv_id);
         mNombre = (TextView) root.findViewById(R.id.tv_nombre);
         mProfesor = (TextView) root.findViewById(R.id.tv_profesor);
-
         mMateriaDbHelper = new MateriaDbHelper(getActivity());
-
+        btnvertareas = (Button) root.findViewById(R.id.btn_vertareas);
+        btnvertareas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showTareasScreen();
+            }
+        });
         loadLawyer();
 
         return root;
@@ -115,6 +123,14 @@ public class MateriaDetailFragment extends Fragment {
         mNombre.setText(materia.getnombre());
         mProfesor.setText(materia.getprofesor());
 
+    }
+
+    private void showTareasScreen() {
+        try {
+            Intent intent = new Intent(getActivity(), TareaActivity.class);
+            startActivity(intent);
+        } catch (Exception e)
+        {System.out.println("mi ERROR:"+e);}
     }
 
     private void showEditScreen() {
